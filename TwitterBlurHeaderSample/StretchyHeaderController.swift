@@ -29,8 +29,8 @@ class StretchyHeaderController: UICollectionViewController, UICollectionViewDele
     
     private func setupCollectionView() {
         collectionView.contentInsetAdjustmentBehavior = .never
-        collectionView.backgroundColor = .white
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.backgroundColor = UIColor(red: 237 / 255, green: 237 / 255, blue: 237 / 255, alpha: 1)
+        collectionView.register(UINib(nibName: "UserCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellId)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
@@ -49,13 +49,13 @@ class StretchyHeaderController: UICollectionViewController, UICollectionViewDele
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = .black
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UserCollectionViewCell
+        cell.configureCell()
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width - self.padding * 2 , height: 50)
+        return .init(width: view.frame.width - self.padding * 2 , height: 280)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

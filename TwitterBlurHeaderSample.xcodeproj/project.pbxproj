@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A22218FC21FD5E190096F2B8 /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22218FB21FD5E190096F2B8 /* StretchyHeaderLayout.swift */; };
+		A222190321FD78100096F2B8 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A222190121FD78100096F2B8 /* UserCollectionViewCell.swift */; };
+		A222190421FD78100096F2B8 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A222190221FD78100096F2B8 /* UserCollectionViewCell.xib */; };
 		A28959AF21FC5509005C401C /* StretchyHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28959AE21FC5509005C401C /* StretchyHeaderController.swift */; };
 		A28959B121FC5A6D005C401C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28959B021FC5A6D005C401C /* HeaderView.swift */; };
 		A2A5959821F718F90099960D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5959721F718F90099960D /* AppDelegate.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		A22218FB21FD5E190096F2B8 /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
+		A222190121FD78100096F2B8 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		A222190221FD78100096F2B8 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 		A28959AE21FC5509005C401C /* StretchyHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderController.swift; sourceTree = "<group>"; };
 		A28959B021FC5A6D005C401C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A2A5959421F718F90099960D /* TwitterBlurHeaderSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterBlurHeaderSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +78,8 @@
 				A28959B021FC5A6D005C401C /* HeaderView.swift */,
 				A2A5959B21F718F90099960D /* Main.storyboard */,
 				A28959AE21FC5509005C401C /* StretchyHeaderController.swift */,
+				A222190121FD78100096F2B8 /* UserCollectionViewCell.swift */,
+				A222190221FD78100096F2B8 /* UserCollectionViewCell.xib */,
 				A2A5959E21F718FB0099960D /* Assets.xcassets */,
 				A2A595A021F718FB0099960D /* LaunchScreen.storyboard */,
 				A2A595A321F718FB0099960D /* Info.plist */,
@@ -140,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A595A221F718FB0099960D /* LaunchScreen.storyboard in Resources */,
+				A222190421FD78100096F2B8 /* UserCollectionViewCell.xib in Resources */,
 				A2A5959F21F718FB0099960D /* Assets.xcassets in Resources */,
 				A2A5959D21F718F90099960D /* Main.storyboard in Resources */,
 			);
@@ -155,6 +162,7 @@
 				A28959AF21FC5509005C401C /* StretchyHeaderController.swift in Sources */,
 				A2A5959A21F718F90099960D /* ViewController.swift in Sources */,
 				A2A5959821F718F90099960D /* AppDelegate.swift in Sources */,
+				A222190321FD78100096F2B8 /* UserCollectionViewCell.swift in Sources */,
 				A22218FC21FD5E190096F2B8 /* StretchyHeaderLayout.swift in Sources */,
 				A28959B121FC5A6D005C401C /* HeaderView.swift in Sources */,
 			);
