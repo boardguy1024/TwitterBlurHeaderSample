@@ -4,6 +4,6 @@
 ![language](https://img.shields.io/badge/language-swift4.2-red.svg)
 ## 概要
 メニュボタンのアニメーション練習
-![animation](./preview.gif)
+![animation](./header_scroll_blur.gif)
 ![header](./background.jpg)
 
