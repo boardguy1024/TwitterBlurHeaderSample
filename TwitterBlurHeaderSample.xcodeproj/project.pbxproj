@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22218FC21FD5E190096F2B8 /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22218FB21FD5E190096F2B8 /* StretchyHeaderLayout.swift */; };
 		A28959AF21FC5509005C401C /* StretchyHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28959AE21FC5509005C401C /* StretchyHeaderController.swift */; };
 		A28959B121FC5A6D005C401C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28959B021FC5A6D005C401C /* HeaderView.swift */; };
 		A2A5959821F718F90099960D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5959721F718F90099960D /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A22218FB21FD5E190096F2B8 /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
 		A28959AE21FC5509005C401C /* StretchyHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderController.swift; sourceTree = "<group>"; };
 		A28959B021FC5A6D005C401C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A2A5959421F718F90099960D /* TwitterBlurHeaderSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterBlurHeaderSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A22218FA21FD5DD40096F2B8 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				A22218FB21FD5E190096F2B8 /* StretchyHeaderLayout.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		A2A5958B21F718F90099960D = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		A2A5959621F718F90099960D /* TwitterBlurHeaderSample */ = {
 			isa = PBXGroup;
 			children = (
+				A22218FA21FD5DD40096F2B8 /* Custom */,
 				A2A5959721F718F90099960D /* AppDelegate.swift */,
 				A2A5959921F718F90099960D /* ViewController.swift */,
 				A28959B021FC5A6D005C401C /* HeaderView.swift */,
@@ -144,6 +155,7 @@
 				A28959AF21FC5509005C401C /* StretchyHeaderController.swift in Sources */,
 				A2A5959A21F718F90099960D /* ViewController.swift in Sources */,
 				A2A5959821F718F90099960D /* AppDelegate.swift in Sources */,
+				A22218FC21FD5E190096F2B8 /* StretchyHeaderLayout.swift in Sources */,
 				A28959B121FC5A6D005C401C /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
