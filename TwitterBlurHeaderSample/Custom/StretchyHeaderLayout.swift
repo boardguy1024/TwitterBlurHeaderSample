@@ -16,7 +16,7 @@ class StretchyHeaderLayout: UICollectionViewFlowLayout {
         layoutAttributes?.forEach { attributes in
             
             //スクロール量によってHeaderのスケールを変更する
-            if attributes.representedElementKind == UICollectionView.elementKindSectionHeader {
+            if attributes.representedElementKind == UICollectionView.elementKindSectionHeader && attributes.indexPath.section == 0 {
                 
                 guard let collectionView = collectionView else { return }
                 let contentOffsetY = collectionView.contentOffset.y

@@ -13,6 +13,7 @@ class StretchyHeaderController: UICollectionViewController, UICollectionViewDele
     private let cellId = "cellId"
     private let headerId = "headerId"
     private let padding: CGFloat = 16
+    private var headerView: HeaderView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,8 @@ class StretchyHeaderController: UICollectionViewController, UICollectionViewDele
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
-        return header
+        headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as? HeaderView
+        return headerView ?? HeaderView()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -60,8 +61,15 @@ class StretchyHeaderController: UICollectionViewController, UICollectionViewDele
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+        
+        //スクロールし量によってぼかし量を設定する
+        if contentOffsetY > 0 {
+            headerView?.animator.fractionComplete = 0
+            return
+        }
+        headerView?.animator.fractionComplete = abs(contentOffsetY) / 100
+    }
 }
-
-
-
-
