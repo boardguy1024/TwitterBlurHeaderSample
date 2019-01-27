@@ -3,7 +3,6 @@
 ![tool](https://img.shields.io/badge/tool-PhotoshopCC-blue.svg)
 ![language](https://img.shields.io/badge/language-swift4.2-red.svg)
 ## 概要
-メニュボタンのアニメーション練習
-![animation](./header_scroll_blur.gif)
-![header](./background.jpg)
+- UIViewPropertyAnimatorを利用し、ScrollView.contentOffsetYの値の変動によりHeaderViewのイメージにblurEffectをかけるサンプルコードです。 😎
 
+![animation](./header_scroll_blur.gif)
