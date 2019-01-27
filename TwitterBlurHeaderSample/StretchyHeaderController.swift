@@ -10,16 +10,26 @@ import UIKit
 
 class StretchyHeaderController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
 
-    fileprivate let cellId = "cellId"
-    fileprivate let headerId = "headerId"
+    private let cellId = "cellId"
+    private let headerId = "headerId"
+    private let padding: CGFloat = 16
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        setupCollectionViewLayout()
+        setupCollectionView()
+    }
+    
+    private func setupCollectionViewLayout() {
+        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionInset = .init(top: padding, left: padding, bottom: padding, right: padding)
+        }
+    }
+    
+    private func setupCollectionView() {
+        collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.backgroundColor = .white
-        
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
-        
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
@@ -29,7 +39,7 @@ class StretchyHeaderController: UICollectionViewController, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return .init(width: view.frame.width, height: 200)
+        return .init(width: view.frame.width, height: 340)
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,7 +54,11 @@ class StretchyHeaderController: UICollectionViewController, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 50)
+        return .init(width: view.frame.width - self.padding * 2 , height: 50)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
